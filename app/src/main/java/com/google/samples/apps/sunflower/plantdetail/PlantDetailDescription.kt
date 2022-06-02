@@ -16,13 +16,31 @@
 
 package com.google.samples.apps.sunflower.plantdetail
 
+import android.content.res.Configuration
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun PlantDetailDescription() {
     Surface {
         Text("Hello Compose")
+    }
+}
+
+@Preview(
+    showBackground = true
+)
+@Preview(
+    name = "Dark Mode",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
+@Composable
+fun PreviewPlantDetailDescription() {
+    MaterialTheme {
+        PlantDetailDescription()
     }
 }
